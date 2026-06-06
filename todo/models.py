@@ -2,10 +2,7 @@ from datetime import datetime
 
 from sqlalchemy import DateTime, ForeignKey, Integer, String
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
-
-
-class Base(DeclarativeBase):
-    pass
+from todo.db import Base
 
 
 class Event(Base):
@@ -32,6 +29,7 @@ class WeeklyRepeat(Base):
     event_id: Mapped[int] = mapped_column(ForeignKey("events.id"), nullable=False)
     week_day: Mapped[int] = mapped_column(nullable=False) # limited to 1-7
     frequency: Mapped[int] = mapped_column(nullable=False) # the event will repeat ever x number of weeks on the given day of the week
+
 
 class MonthlyRepeat(Base):
     __tablename__ = "monthly_repeats"

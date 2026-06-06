@@ -1,6 +1,10 @@
-import dotenv
+import os
+from dotenv import load_dotenv
 
-DATABASE_URL = ""
+load_dotenv("config.env")
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+DEBUGGING_STATE = bool(os.getenv("DEBUGGING"))
 
 import todo
 
