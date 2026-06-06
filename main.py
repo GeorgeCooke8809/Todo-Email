@@ -1,3 +1,5 @@
+import todo
+
 def main():
     print("Hello from todo-email!")
 
