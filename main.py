@@ -1,3 +1,7 @@
+import dotenv
+
+DATABASE_URL = ""
+
 import todo
 
 def main():
