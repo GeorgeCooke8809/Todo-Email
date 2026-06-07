@@ -8,6 +8,8 @@ DEBUGGING_STATE = bool(os.getenv("DEBUGGING"))
 
 import todo
 
+# TODO Add logging and research how to use it across modules
+
 def main():
     print("Hello from todo-email!")
 
